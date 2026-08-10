@@ -42,6 +42,8 @@ Use **Code Buddy: Open Feedback**, **Code Buddy: Open Analytics**, or **Code Bud
 - Files and lines changed between prompt start and turn completion.
 - Tool activity, failures, observed textual context volume, and session activity.
 
+Worktree tracking has been verified for added, modified, and deleted files. The comparison measures net changes that exist on disk between the first prompt snapshot and the completed turn. If Copilot cannot create a file, or a file is created and deleted before the turn ends, that change cannot be reported as a lasting worktree delta.
+
 ## Privacy and limitations
 
 Records remain local to the workspace, with sensitive-looking values redacted by default. Worktree changes are observed before and after a turn and may include edits made outside Copilot during that interval. Exact model token usage, hidden system prompts, and model-internal reasoning are not exposed by the supported hooks.
