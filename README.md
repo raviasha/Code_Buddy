@@ -113,26 +113,20 @@ Code Buddy is an intelligent AI-powered coding assistant available for both **VS
 
 ---
 
-## 📚 Source Code
-
-The full source code for Code Buddy is maintained in the [Token-Lens](https://github.com/raviasha/Token-Lens) repository. This repository contains the built and packaged distributions (\`.vsix\` and plugin files) for easy installation.
-
 ## 📖 Documentation
 
-For detailed documentation, usage guides, advanced configuration, and development information, please visit the [Token-Lens repository](https://github.com/raviasha/Token-Lens).
+For detailed documentation and advanced usage guides, please check the documentation files in this repository or contact the development team.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please visit the [Token-Lens repository](https://github.com/raviasha/Token-Lens) for contribution guidelines and development setup.
+Contributions are welcome! Please open an issue or submit a pull request to contribute improvements.
 
 ## 📄 License
 
-Code Buddy is licensed under the MIT License. See the [Token-Lens repository](https://github.com/raviasha/Token-Lens) for license details.
+Code Buddy is licensed under the MIT License.
 
 ---
 
 **Code Buddy** - Making coding smarter with AI assistance
-
-For support, issues, or questions, please refer to the [Token-Lens repository](https://github.com/raviasha/Token-Lens).
