@@ -12,6 +12,4 @@ This folder contains the latest VS Code extension build for Code Buddy.
 
 ## Files
 
-All `.vsix` files in this folder are ready to download and install.
-
-For source code and development information, visit the [Token-Lens repository](https://github.com/raviasha/Token-Lens).
+All `.vsix` files in this folder are ready to download and install
