@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Northstar Market - everyday discovery, delivered." />
+    <title>Northstar Market | Everyday discovery</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="#top" aria-label="Northstar Market home"><span class="brand-mark">✦</span>northstar</a>
+        <button class="location" type="button" aria-label="Select delivery location" aria-haspopup="dialog" aria-controls="location-dialog"><span>Deliver to</span><strong id="delivery-location">San Francisco 94103</strong></button>
+        <form class="search" role="search">
+          <select aria-label="Search department"><option>All departments</option><option>Home</option><option>Electronics</option><option>Beauty</option></select>
+          <input aria-label="Search products" placeholder="Search millions of useful things" />
+          <button type="submit" aria-label="Search">⌕</button>
+        </form>
+        <button class="account" type="button" aria-haspopup="dialog" aria-controls="saved-dialog"><span>Welcome, Riya</span><strong>Account & lists</strong></button>
+        <button class="orders" type="button" aria-haspopup="dialog" aria-controls="orders-dialog"><span>Returns</span><strong>& orders</strong></button>
+        <button class="basket" type="button" aria-label="View basket" aria-haspopup="dialog" aria-controls="cart-dialog"><b id="basket-count">0</b><span>Basket</span></button>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="menu-button" type="button" aria-haspopup="dialog" aria-controls="browse-dialog">☰ <span>Browse</span></button>
+        <a href="#deals">Today's finds</a><a href="#home">Home refresh</a><a href="#tech">Tech desk</a><a href="#gifts">Gifts under $30</a><a href="#trending">Trending now</a>
+        <a class="nav-promo" href="#deals">Summer savings, up to 40% off</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Summer living collection">
+        <div class="hero-copy">
+          <p class="eyebrow">The bright-side edit</p>
+          <h1>Make room for a little more summer.</h1>
+          <p>Easy upgrades for sunny kitchens, slower mornings, and every plan in between.</p>
+          <a class="cta" href="#home">Shop the collection <span>→</span></a>
+        </div>
+        <div class="hero-product product-one"><img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=85" alt="Yellow chair in a sunny room" /></div>
+        <div class="hero-product product-two"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=800&q=85" alt="Fresh colorful flowers" /></div>
+        <div class="hero-note">New arrivals<br /><strong>made for easy living</strong></div>
+      </section>
+
+      <section class="category-strip" aria-label="Shop categories">
+        <button class="category-button" type="button" data-category="home"><span class="category-icon coral">⌂</span>Home</button><button class="category-button" type="button" data-category="electronics"><span class="category-icon blue">◉</span>Tech</button><button class="category-button" type="button" data-category="beauty"><span class="category-icon yellow">✿</span>Beauty</button><button class="category-button" type="button" data-category=""><span class="category-icon green">♧</span>Outdoors</button><button class="category-button" type="button" data-category=""><span class="category-icon pink">♢</span>Style</button><button class="category-button" type="button" data-category=""><span class="category-icon violet">▣</span>Deals</button>
+      </section>
+
+      <section class="content-section" id="deals">
+        <div class="section-heading"><div><p class="eyebrow">Now worth a look</p><h2>Deals with good timing</h2></div><a href="#deals">View all deals →</a></div>
+        <div class="deal-grid">
+          <article class="feature-deal"><img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1000&q=85" alt="Soft modern living room" /><div><span>Up to 35% off</span><h3>Small changes. Big mood.</h3><a href="#home">Refresh your space →</a></div></article>
+          <article class="feature-deal orange-deal"><img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6?auto=format&fit=crop&w=900&q=85" alt="Headphones on a desk" /><div><span>Just dropped</span><h3>Sound, beautifully tuned.</h3><a href="#tech">Explore audio →</a></div></article>
+        </div>
+      </section>
+
+      <section class="content-section" id="trending">
+        <div class="section-heading"><div><p class="eyebrow">Popular right now</p><h2>Small delights, big follow-through</h2></div><button class="text-button">See more</button></div>
+        <p class="search-results" aria-live="polite" hidden></p>
+        <div class="product-grid">
+          <article class="product-card" data-category="electronics" data-description="Pocket-sized wireless audio with a soft, balanced sound and all-day listening comfort."><div class="product-image lime"><img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=500&q=85" alt="Wireless earbuds" /><span>Best seller</span></div><p class="product-type">Audio</p><h3>Cloudloop Mini Earbuds</h3><div class="rating">★★★★★ <small>(1,284)</small></div><p class="price">$39.99 <del>$54.99</del></p><div class="product-actions"><button class="details-button" type="button">View details</button><button class="add-button" data-product="Cloudloop Mini Earbuds" data-price="39.99">Add to basket</button><button class="save-button" type="button">Save</button></div></article>
+          <article class="product-card" data-category="home" data-description="A playful set of four rippled glasses made for iced coffee, sparkling water, and slow weekend breakfasts."><div class="product-image peach"><img src="https://images.unsplash.com/photo-1611080541599-8c6dbde6ed28?auto=format&fit=crop&w=500&q=85" alt="Colorful glassware" /><span>New</span></div><p class="product-type">Kitchen</p><h3>Ripple Glass Set, 4-pack</h3><div class="rating">★★★★★ <small>(342)</small></div><p class="price">$24.00</p><div class="product-actions"><button class="details-button" type="button">View details</button><button class="add-button" data-product="Ripple Glass Set" data-price="24">Add to basket</button><button class="save-button" type="button">Save</button></div></article>
+          <article class="product-card" data-category="electronics" data-description="A clean, durable everyday timepiece with a deep moss face and a comfortable woven strap."><div class="product-image blue-bg"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=85" alt="Minimal wristwatch" /></div><p class="product-type">Everyday carry</p><h3>Field Watch, Moss</h3><div class="rating">★★★★☆ <small>(89)</small></div><p class="price">$68.00</p><div class="product-actions"><button class="details-button" type="button">View details</button><button class="add-button" data-product="Field Watch, Moss" data-price="68">Add to basket</button><button class="save-button" type="button">Save</button></div></article>
+          <article class="product-card" data-category="beauty" data-description="A four-step evening ritual with gentle essentials for a more rested-looking morning."><div class="product-image pink-bg"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=500&q=85" alt="Skincare products" /><span>Save 20%</span></div><p class="product-type">Self care</p><h3>Sunday Reset Skincare Kit</h3><div class="rating">★★★★★ <small>(615)</small></div><p class="price">$32.00 <del>$40.00</del></p><div class="product-actions"><button class="details-button" type="button">View details</button><button class="add-button" data-product="Sunday Reset Skincare Kit" data-price="32">Add to basket</button><button class="save-button" type="button">Save</button></div></article>
+        </div>
+      </section>
+
+      <section class="content-section home-block" id="home">
+        <div class="section-heading"><div><p class="eyebrow">For your space</p><h2>Start where you are</h2></div><a href="#home">Shop home →</a></div>
+        <div class="home-grid"><a class="home-tile large-tile" href="#home"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1100&q=85" alt="Warmly styled living room" /><span><small>THE LIVING ROOM EDIT</small>Soft places to land</span></a><a class="home-tile" href="#home"><img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=700&q=85" alt="Home decor on a shelf" /><span>Storage that keeps up</span></a><a class="home-tile" href="#gifts"><img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=85" alt="Bright home accessories" /><span>Color, with intention</span></a></div>
+      </section>
+    </main>
+    <footer><div class="footer-inner"><a class="brand" href="#top"><span class="brand-mark">✦</span>northstar</a><p>More good things, closer to home.</p><a href="#top">Back to top ↑</a></div></footer>
+    <div class="toast" role="status" aria-live="polite">Added to your basket</div>
+    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+      <section class="cart-panel">
+        <div class="dialog-heading"><div><p class="eyebrow">Your basket</p><h2 id="cart-title">Ready when you are.</h2></div><button class="icon-button close-cart" type="button" aria-label="Close basket">×</button></div>
+        <div class="cart-body">
+          <div class="cart-items" aria-live="polite"></div>
+          <aside class="order-summary"><h3>Order summary</h3><div><span>Subtotal</span><strong class="subtotal">$0.00</strong></div><div><span>Standard delivery</span><strong>Free</strong></div><div class="summary-total"><span>Total</span><strong class="total">$0.00</strong></div><button class="checkout-button" type="button">Continue to checkout</button><p>Taxes are calculated at checkout.</p></aside>
+        </div>
+      </section>
+    </dialog>
+    <dialog class="checkout-dialog" id="checkout-dialog" aria-labelledby="checkout-title">
+      <section class="checkout-panel">
+        <div class="dialog-heading"><div><p class="eyebrow">Secure checkout</p><h2 id="checkout-title">Almost yours.</h2></div><button class="icon-button close-checkout" type="button" aria-label="Close checkout">×</button></div>
+        <form class="checkout-form">
+          <div class="checkout-fields"><label>Full name<input name="name" autocomplete="name" required /></label><label>Email<input type="email" name="email" autocomplete="email" required /></label><label class="full-field">Delivery address<input name="address" autocomplete="street-address" required /></label><label>City<input name="city" autocomplete="address-level2" required /></label><label>Postal code<input name="postal" autocomplete="postal-code" required /></label><label class="full-field">Card number<input name="card" inputmode="numeric" autocomplete="cc-number" minlength="12" placeholder="4242 4242 4242 4242" required /></label></div>
+          <div class="checkout-total"><span>Order total</span><strong>$0.00</strong></div><button class="place-order" type="submit">Place order</button><p class="payment-note">Demo checkout. No payment details are sent or stored.</p>
+        </form>
+        <div class="order-success" hidden><span>✦</span><h2>Order confirmed.</h2><p>Your order <strong class="order-number"></strong> will be on its way soon.</p><button class="return-shop" type="button">Keep shopping</button></div>
+      </section>
+    </dialog>
+    <dialog class="orders-dialog" id="orders-dialog" aria-labelledby="orders-title">
+      <section class="orders-panel">
+        <div class="dialog-heading"><div><p class="eyebrow">Purchase history</p><h2 id="orders-title">Your orders</h2></div><button class="icon-button close-orders" type="button" aria-label="Close orders">×</button></div>
+        <div class="orders-list" aria-live="polite"></div>
+      </section>
+    </dialog>
+    <dialog class="product-dialog" id="product-dialog" aria-labelledby="product-title">
+      <section class="product-panel">
+        <button class="icon-button close-product" type="button" aria-label="Close product details">×</button>
+        <div class="detail-image"><img src="" alt="" /></div>
+        <div class="detail-copy"><p class="eyebrow detail-category"></p><h2 id="product-title"></h2><p class="detail-rating"></p><p class="detail-description"></p><strong class="detail-price"></strong><div class="detail-actions"><button class="detail-add" type="button">Add to basket</button><button class="detail-save" type="button">Save item</button></div></div>
+      </section>
+    </dialog>
+    <dialog class="saved-dialog" id="saved-dialog" aria-labelledby="saved-title"><section class="saved-panel"><div class="dialog-heading"><div><p class="eyebrow">Account & lists</p><h2 id="saved-title">Saved items</h2></div><button class="icon-button close-saved" type="button" aria-label="Close saved items">×</button></div><div class="saved-list" aria-live="polite"></div></section></dialog>
+    <dialog class="location-dialog" id="location-dialog" aria-labelledby="location-title"><section class="location-panel"><div class="dialog-heading"><div><p class="eyebrow">Delivery preferences</p><h2 id="location-title">Where should we deliver?</h2></div><button class="icon-button close-location" type="button" aria-label="Close delivery location">×</button></div><form class="location-form"><label>City<input name="city" autocomplete="address-level2" required /></label><label>Postal code<input name="postal" autocomplete="postal-code" inputmode="numeric" required /></label><button type="submit">Save delivery location</button></form></section></dialog>
+    <dialog class="browse-dialog" id="browse-dialog" aria-labelledby="browse-title"><section class="browse-panel"><div class="dialog-heading"><div><p class="eyebrow">Shop by department</p><h2 id="browse-title">Browse Northstar</h2></div><button class="icon-button close-browse" type="button" aria-label="Close browse menu">×</button></div><div class="browse-options"><button type="button" data-browse-category="">All products <span>→</span></button><button type="button" data-browse-category="home">Home & kitchen <span>→</span></button><button type="button" data-browse-category="electronics">Tech & audio <span>→</span></button><button type="button" data-browse-category="beauty">Beauty & self care <span>→</span></button></div></section></dialog>
+    <script src="script.js"></script>
+  </body>
+</html>

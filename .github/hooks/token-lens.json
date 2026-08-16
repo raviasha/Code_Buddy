@@ -1,0 +1,257 @@
+{
+  "version": 1,
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "bash": "'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "powershell": "& 'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "cwd": "/Users/rampetaravishankar/Desktop/Code_Buddy",
+        "env": {
+          "TOKEN_LENS_LOG_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/copilot-session.jsonl",
+          "TOKEN_LENS_REDACT_SENSITIVE": "true",
+          "TOKEN_LENS_CAPTURE_TRANSCRIPTS": "true",
+          "TOKEN_LENS_STATE_DIR": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/.state",
+          "TOKEN_LENS_ANALYTICS_SCRIPT": "/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/code_buddy.py",
+          "TOKEN_LENS_FEEDBACK_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy.md",
+          "TOKEN_LENS_ANALYTICS_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy Analytics.md",
+          "TOKEN_LENS_TRACK_WORKTREE_CHANGES": "true",
+          "TOKEN_LENS_SNAPSHOT_MAX_FILE_BYTES": "1000000",
+          "TOKEN_LENS_PYTHON_COMMAND": ""
+        },
+        "timeoutSec": 10
+      }
+    ],
+    "SessionEnd": [
+      {
+        "type": "command",
+        "bash": "'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "powershell": "& 'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "cwd": "/Users/rampetaravishankar/Desktop/Code_Buddy",
+        "env": {
+          "TOKEN_LENS_LOG_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/copilot-session.jsonl",
+          "TOKEN_LENS_REDACT_SENSITIVE": "true",
+          "TOKEN_LENS_CAPTURE_TRANSCRIPTS": "true",
+          "TOKEN_LENS_STATE_DIR": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/.state",
+          "TOKEN_LENS_ANALYTICS_SCRIPT": "/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/code_buddy.py",
+          "TOKEN_LENS_FEEDBACK_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy.md",
+          "TOKEN_LENS_ANALYTICS_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy Analytics.md",
+          "TOKEN_LENS_TRACK_WORKTREE_CHANGES": "true",
+          "TOKEN_LENS_SNAPSHOT_MAX_FILE_BYTES": "1000000",
+          "TOKEN_LENS_PYTHON_COMMAND": ""
+        },
+        "timeoutSec": 10
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "type": "command",
+        "bash": "'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "powershell": "& 'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "cwd": "/Users/rampetaravishankar/Desktop/Code_Buddy",
+        "env": {
+          "TOKEN_LENS_LOG_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/copilot-session.jsonl",
+          "TOKEN_LENS_REDACT_SENSITIVE": "true",
+          "TOKEN_LENS_CAPTURE_TRANSCRIPTS": "true",
+          "TOKEN_LENS_STATE_DIR": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/.state",
+          "TOKEN_LENS_ANALYTICS_SCRIPT": "/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/code_buddy.py",
+          "TOKEN_LENS_FEEDBACK_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy.md",
+          "TOKEN_LENS_ANALYTICS_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy Analytics.md",
+          "TOKEN_LENS_TRACK_WORKTREE_CHANGES": "true",
+          "TOKEN_LENS_SNAPSHOT_MAX_FILE_BYTES": "1000000",
+          "TOKEN_LENS_PYTHON_COMMAND": ""
+        },
+        "timeoutSec": 10
+      }
+    ],
+    "UserPromptTransformed": [
+      {
+        "type": "command",
+        "bash": "'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "powershell": "& 'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "cwd": "/Users/rampetaravishankar/Desktop/Code_Buddy",
+        "env": {
+          "TOKEN_LENS_LOG_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/copilot-session.jsonl",
+          "TOKEN_LENS_REDACT_SENSITIVE": "true",
+          "TOKEN_LENS_CAPTURE_TRANSCRIPTS": "true",
+          "TOKEN_LENS_STATE_DIR": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/.state",
+          "TOKEN_LENS_ANALYTICS_SCRIPT": "/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/code_buddy.py",
+          "TOKEN_LENS_FEEDBACK_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy.md",
+          "TOKEN_LENS_ANALYTICS_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy Analytics.md",
+          "TOKEN_LENS_TRACK_WORKTREE_CHANGES": "true",
+          "TOKEN_LENS_SNAPSHOT_MAX_FILE_BYTES": "1000000",
+          "TOKEN_LENS_PYTHON_COMMAND": ""
+        },
+        "timeoutSec": 10
+      }
+    ],
+    "PreToolUse": [
+      {
+        "type": "command",
+        "bash": "'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "powershell": "& 'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "cwd": "/Users/rampetaravishankar/Desktop/Code_Buddy",
+        "env": {
+          "TOKEN_LENS_LOG_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/copilot-session.jsonl",
+          "TOKEN_LENS_REDACT_SENSITIVE": "true",
+          "TOKEN_LENS_CAPTURE_TRANSCRIPTS": "true",
+          "TOKEN_LENS_STATE_DIR": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/.state",
+          "TOKEN_LENS_ANALYTICS_SCRIPT": "/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/code_buddy.py",
+          "TOKEN_LENS_FEEDBACK_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy.md",
+          "TOKEN_LENS_ANALYTICS_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy Analytics.md",
+          "TOKEN_LENS_TRACK_WORKTREE_CHANGES": "true",
+          "TOKEN_LENS_SNAPSHOT_MAX_FILE_BYTES": "1000000",
+          "TOKEN_LENS_PYTHON_COMMAND": ""
+        },
+        "timeoutSec": 10
+      }
+    ],
+    "PostToolUse": [
+      {
+        "type": "command",
+        "bash": "'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "powershell": "& 'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "cwd": "/Users/rampetaravishankar/Desktop/Code_Buddy",
+        "env": {
+          "TOKEN_LENS_LOG_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/copilot-session.jsonl",
+          "TOKEN_LENS_REDACT_SENSITIVE": "true",
+          "TOKEN_LENS_CAPTURE_TRANSCRIPTS": "true",
+          "TOKEN_LENS_STATE_DIR": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/.state",
+          "TOKEN_LENS_ANALYTICS_SCRIPT": "/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/code_buddy.py",
+          "TOKEN_LENS_FEEDBACK_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy.md",
+          "TOKEN_LENS_ANALYTICS_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy Analytics.md",
+          "TOKEN_LENS_TRACK_WORKTREE_CHANGES": "true",
+          "TOKEN_LENS_SNAPSHOT_MAX_FILE_BYTES": "1000000",
+          "TOKEN_LENS_PYTHON_COMMAND": ""
+        },
+        "timeoutSec": 10
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "type": "command",
+        "bash": "'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "powershell": "& 'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "cwd": "/Users/rampetaravishankar/Desktop/Code_Buddy",
+        "env": {
+          "TOKEN_LENS_LOG_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/copilot-session.jsonl",
+          "TOKEN_LENS_REDACT_SENSITIVE": "true",
+          "TOKEN_LENS_CAPTURE_TRANSCRIPTS": "true",
+          "TOKEN_LENS_STATE_DIR": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/.state",
+          "TOKEN_LENS_ANALYTICS_SCRIPT": "/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/code_buddy.py",
+          "TOKEN_LENS_FEEDBACK_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy.md",
+          "TOKEN_LENS_ANALYTICS_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy Analytics.md",
+          "TOKEN_LENS_TRACK_WORKTREE_CHANGES": "true",
+          "TOKEN_LENS_SNAPSHOT_MAX_FILE_BYTES": "1000000",
+          "TOKEN_LENS_PYTHON_COMMAND": ""
+        },
+        "timeoutSec": 10
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "bash": "'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "powershell": "& 'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "cwd": "/Users/rampetaravishankar/Desktop/Code_Buddy",
+        "env": {
+          "TOKEN_LENS_LOG_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/copilot-session.jsonl",
+          "TOKEN_LENS_REDACT_SENSITIVE": "true",
+          "TOKEN_LENS_CAPTURE_TRANSCRIPTS": "true",
+          "TOKEN_LENS_STATE_DIR": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/.state",
+          "TOKEN_LENS_ANALYTICS_SCRIPT": "/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/code_buddy.py",
+          "TOKEN_LENS_FEEDBACK_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy.md",
+          "TOKEN_LENS_ANALYTICS_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy Analytics.md",
+          "TOKEN_LENS_TRACK_WORKTREE_CHANGES": "true",
+          "TOKEN_LENS_SNAPSHOT_MAX_FILE_BYTES": "1000000",
+          "TOKEN_LENS_PYTHON_COMMAND": ""
+        },
+        "timeoutSec": 10
+      }
+    ],
+    "SubagentStart": [
+      {
+        "type": "command",
+        "bash": "'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "powershell": "& 'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "cwd": "/Users/rampetaravishankar/Desktop/Code_Buddy",
+        "env": {
+          "TOKEN_LENS_LOG_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/copilot-session.jsonl",
+          "TOKEN_LENS_REDACT_SENSITIVE": "true",
+          "TOKEN_LENS_CAPTURE_TRANSCRIPTS": "true",
+          "TOKEN_LENS_STATE_DIR": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/.state",
+          "TOKEN_LENS_ANALYTICS_SCRIPT": "/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/code_buddy.py",
+          "TOKEN_LENS_FEEDBACK_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy.md",
+          "TOKEN_LENS_ANALYTICS_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy Analytics.md",
+          "TOKEN_LENS_TRACK_WORKTREE_CHANGES": "true",
+          "TOKEN_LENS_SNAPSHOT_MAX_FILE_BYTES": "1000000",
+          "TOKEN_LENS_PYTHON_COMMAND": ""
+        },
+        "timeoutSec": 10
+      }
+    ],
+    "SubagentStop": [
+      {
+        "type": "command",
+        "bash": "'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "powershell": "& 'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "cwd": "/Users/rampetaravishankar/Desktop/Code_Buddy",
+        "env": {
+          "TOKEN_LENS_LOG_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/copilot-session.jsonl",
+          "TOKEN_LENS_REDACT_SENSITIVE": "true",
+          "TOKEN_LENS_CAPTURE_TRANSCRIPTS": "true",
+          "TOKEN_LENS_STATE_DIR": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/.state",
+          "TOKEN_LENS_ANALYTICS_SCRIPT": "/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/code_buddy.py",
+          "TOKEN_LENS_FEEDBACK_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy.md",
+          "TOKEN_LENS_ANALYTICS_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy Analytics.md",
+          "TOKEN_LENS_TRACK_WORKTREE_CHANGES": "true",
+          "TOKEN_LENS_SNAPSHOT_MAX_FILE_BYTES": "1000000",
+          "TOKEN_LENS_PYTHON_COMMAND": ""
+        },
+        "timeoutSec": 10
+      }
+    ],
+    "ErrorOccurred": [
+      {
+        "type": "command",
+        "bash": "'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "powershell": "& 'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "cwd": "/Users/rampetaravishankar/Desktop/Code_Buddy",
+        "env": {
+          "TOKEN_LENS_LOG_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/copilot-session.jsonl",
+          "TOKEN_LENS_REDACT_SENSITIVE": "true",
+          "TOKEN_LENS_CAPTURE_TRANSCRIPTS": "true",
+          "TOKEN_LENS_STATE_DIR": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/.state",
+          "TOKEN_LENS_ANALYTICS_SCRIPT": "/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/code_buddy.py",
+          "TOKEN_LENS_FEEDBACK_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy.md",
+          "TOKEN_LENS_ANALYTICS_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy Analytics.md",
+          "TOKEN_LENS_TRACK_WORKTREE_CHANGES": "true",
+          "TOKEN_LENS_SNAPSHOT_MAX_FILE_BYTES": "1000000",
+          "TOKEN_LENS_PYTHON_COMMAND": ""
+        },
+        "timeoutSec": 10
+      }
+    ],
+    "PreCompact": [
+      {
+        "type": "command",
+        "bash": "'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "powershell": "& 'node' '/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/hook.cjs'",
+        "cwd": "/Users/rampetaravishankar/Desktop/Code_Buddy",
+        "env": {
+          "TOKEN_LENS_LOG_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/copilot-session.jsonl",
+          "TOKEN_LENS_REDACT_SENSITIVE": "true",
+          "TOKEN_LENS_CAPTURE_TRANSCRIPTS": "true",
+          "TOKEN_LENS_STATE_DIR": "/Users/rampetaravishankar/Desktop/Code_Buddy/.code-buddy/.state",
+          "TOKEN_LENS_ANALYTICS_SCRIPT": "/Users/rampetaravishankar/.vscode/extensions/code-buddy.code-buddy-0.6.2/code_buddy.py",
+          "TOKEN_LENS_FEEDBACK_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy.md",
+          "TOKEN_LENS_ANALYTICS_FILE": "/Users/rampetaravishankar/Desktop/Code_Buddy/Code Buddy Analytics.md",
+          "TOKEN_LENS_TRACK_WORKTREE_CHANGES": "true",
+          "TOKEN_LENS_SNAPSHOT_MAX_FILE_BYTES": "1000000",
+          "TOKEN_LENS_PYTHON_COMMAND": ""
+        },
+        "timeoutSec": 10
+      }
+    ]
+  }
+}
