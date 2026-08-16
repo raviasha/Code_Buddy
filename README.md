@@ -1,33 +1,71 @@
-# Code Buddy
+# Code Buddy for Codex
 
-Code Buddy is an intelligent AI-powered coding assistant available for both **VS Code** and **Codex**.
+Code Buddy is a Codex plugin that provides transparent, developer-controlled
+prompt-quality, task-scope, estimated-context-pressure, and session-fit checks
+for meaningful coding tasks.
 
-## 📦 Downloads
+This is the public plugin distribution repository. It intentionally contains
+only the Codex runtime package; the VS Code extension, tests, and Token Lens
+development project are not included.
 
-### VS Code Extension
-The VS Code extension is available in the [`/vscode`](./vscode) folder. You can install it directly in VS Code or download the `.vsix` file and install it manually.
+## Install
 
-- **Location**: [`/vscode`](./vscode)
-- **File**: `code-buddy-*.vsix`
+In a terminal, add this repository as a Codex marketplace and install the
+plugin:
 
-### Codex Plugin
-The Codex plugin is available in the [`/codex`](./codex) folder.
+```sh
+codex plugin marketplace add raviasha/Code_Buddy --ref main
+codex plugin add code-buddy@code-buddy
+```
 
-- **Location**: [`/codex`](./codex)
+Restart Codex, open **Plugins**, and enable **Code Buddy**. Codex remembers
+that choice for new tasks. The first time Code Buddy runs, review and trust the
+hook permission requested by Codex.
 
-## 📚 Source Code
+## What it does
 
-The full source code for Code Buddy is maintained in the [Token-Lens](https://github.com/raviasha/Token-Lens) repository. This repository contains the built and packaged distributions (`.vsix` and plugin files) for easy installation.
+For every meaningful coding request while enabled, Code Buddy reports:
 
-## 🚀 Getting Started
+`Code Buddy: prompt quality <status> · task scope <status> · estimated context pressure <status> · session fit <status>`
 
-1. **For VS Code**: Download the `.vsix` file from the `/vscode` folder and install it in VS Code
-2. **For Codex**: Navigate to the `/codex` folder for plugin installation instructions
+The plugin never silently changes the prompt, starts a fresh task, or curates
+context. It offers choices when an action would help. If local context evidence
+is insufficient, the status is **checked — limited evidence**, not an actual
+context-use claim.
 
-## 📖 Documentation
+## Project policy
 
-For detailed documentation, usage guides, and development information, please visit the [Token-Lens repository](https://github.com/raviasha/Token-Lens).
+Optionally add `code-buddy.yaml` to a project root:
 
----
+```yaml
+version: 1
+healthCheck:
+  showOnEveryMeaningfulCodingTask: true
+thresholds:
+  promptQuality:
+    enhanceBelow: 75
+  taskScope:
+    decomposeAtOrAbove: 65
+  estimatedContextPressure:
+    capacityTokens: 40000
+    warningAt: 0.70
+    criticalAt: 0.85
+  sessionFit:
+    recommendFreshTaskAtOrAbove: 75
+    fallbackLexicalOverlapBelow: 0.20
+```
 
-**Code Buddy** - Making coding smarter with AI assistance
+Raise `enhanceBelow` for more prompt-improvement suggestions. Lower the other
+thresholds for stricter decomposition, pressure, or fresh-task advice.
+
+## Update
+
+```sh
+codex plugin marketplace upgrade code-buddy
+codex plugin add code-buddy@code-buddy
+```
+
+## Privacy
+
+Code Buddy writes redacted local logs and reports inside the active workspace.
+It has no separate telemetry service.
