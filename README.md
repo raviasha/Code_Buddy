@@ -1,132 +1,70 @@
 # Code Buddy
 
-Code Buddy is an intelligent AI-powered coding assistant available for both **VS Code** and **Codex**.
+Code Buddy helps developers make better use of AI coding sessions in VS Code and Codex. It reviews meaningful prompts, assesses task scope, labels estimated context pressure clearly, and offers developer-controlled handoffs when a fresh task would help.
 
-## 📦 Downloads
+This is a distribution repository. Download the VS Code extension, or install the Codex plugin directly from this repository.
 
-- **VS Code Extension**: Available in the [`/vscode`](./vscode) folder
-- **Codex Plugin**: Available in the [`/codex`](./codex) folder
+## Install
 
-## 🚀 Installation Instructions
+### VS Code extension
 
-### VS Code Extension
+Requirements:
 
-#### Prerequisites
-- VS Code installed on your machine
-- Node.js (for running hooks)
+- VS Code 1.95 or later
+- GitHub Copilot for Copilot session and hook features
 
-#### Installation Steps
+1. Download [Code Buddy v0.8.2](https://github.com/raviasha/Code_Buddy/releases/download/v0.8.2/code-buddy-0.8.2.vsix).
+2. In VS Code, open **Extensions**, select **…**, then choose **Install from VSIX…**.
+3. Select the downloaded file and reload VS Code.
+4. Open the Command Palette and run **Code Buddy: Install Copilot Hooks** in each workspace where you want Code Buddy enabled.
 
-1. **Download the Extension**
-   - Navigate to the [`/vscode`](./vscode) folder in this repository
-   - Download the latest `.vsix` file (e.g., `code-buddy-0.8.4.vsix`)
+See [VS Code installation details](vscode/README.md) for verification and troubleshooting.
 
-2. **Install in VS Code**
-   - Open VS Code
-   - Go to Extensions (Cmd+Shift+X on Mac, Ctrl+Shift+X on Windows/Linux)
-   - Click the "..." menu and select "Install from VSIX..."
-   - Select the downloaded `.vsix` file
-   - Wait for the installation to complete
+### Codex plugin
 
-3. **Reload VS Code**
-   - After installation completes, reload the VS Code window
-   - Use Cmd+Shift+P (Mac) or Ctrl+Shift+P (Windows/Linux) to open the Command Palette
-   - Type "Reload Window" and press Enter
+In a terminal, add this repository as a Codex plugin marketplace, then install Code Buddy:
 
-4. **Initialize Hooks**
-   - Code Buddy uses hooks for enhanced functionality
-   - The hooks will be automatically installed when you first use the extension
-   - If you need to manually install hooks, run the following in your project directory:
-     \`\`\`bash
-     npm install code-buddy
-     npm run setup-hooks
-     \`\`\`
+```bash
+codex plugin marketplace add raviasha/Code_Buddy --ref main
+codex plugin install code-buddy@code-buddy
+```
 
-5. **Verify Installation**
-   - Open a project folder in VS Code
-   - The Code Buddy icon should appear in the Activity Bar
-   - You're ready to use Code Buddy!
+Restart Codex after installation. In **Plugins**, use the Code Buddy Enable/Disable switch to control it for newly created tasks.
 
-#### Troubleshooting
-- If the extension doesn't appear after reload, try restarting VS Code completely
-- Ensure you have the correct version of Node.js installed for hooks to work properly
-- Check the VS Code output panel for any error messages
+## What Code Buddy does
 
----
+- **Prompt review** — evaluates meaningful coding prompts while preserving the original prompt as an option.
+- **Task-scope assessment** — recommends decomposition only when it would improve execution.
+- **Estimated Context Pressure** — reports locally derived estimates honestly, without presenting them as actual provider context usage.
+- **Session-fit checks** — identifies when a task may benefit from a fresh chat, while leaving the decision with the developer.
+- **Curated handoffs** — prepares minimum-sufficient context bundles when you explicitly choose one.
+- **Local reports** — keeps feedback, analytics, and intervention records in your workspace.
+- **Project policy** — supports an optional `code-buddy.yaml` for team-visible thresholds and health-check behavior.
 
-### Codex Plugin
+## Common commands
 
-#### Prerequisites
-- Codex installed and configured
-- Python 3.8 or higher
-- Required Python packages (see installation step 2)
+After installing the VS Code extension, use the Command Palette to run:
 
-#### Installation Steps
+- **Code Buddy: Install Copilot Hooks**
+- **Code Buddy: Review Prompt**
+- **Code Buddy: Decompose Task**
+- **Code Buddy: Measure Context**
+- **Code Buddy: Curate Context**
+- **Code Buddy: Open Feedback**
+- **Code Buddy: Open Analytics**
 
-1. **Download the Plugin**
-   - Navigate to the [`/codex`](./codex) folder in this repository
-   - Download the Codex plugin files
+## Privacy
 
-2. **Install Dependencies**
-   \`\`\`bash
-   cd /path/to/codex
-   pip install -r requirements.txt
-   \`\`\`
+Code Buddy stores its reports and event records locally in the workspace. Review the extension settings and your workspace's `code-buddy.yaml` before enabling capture in sensitive projects.
 
-3. **Copy Plugin Files**
-   - Copy the plugin directory to your Codex plugins directory:
-     \`\`\`bash
-     cp -r code-buddy ~/.codex/plugins/
-     \`\`\`
+## Repository layout
 
-4. **Register the Plugin**
-   - Edit your Codex configuration file (usually \`~/.codex/config.json\`)
-   - Add the Code Buddy plugin to the plugins list:
-     \`\`\`json
-     {
-       "plugins": [
-         "code-buddy"
-       ]
-     }
-     \`\`\`
+```text
+.agents/plugins/marketplace.json  Codex marketplace entry
+plugins/code-buddy/               Codex plugin package
+vscode/                           VSIX download and VS Code instructions
+```
 
-5. **Initialize Hooks**
-   - Run the Code Buddy setup script:
-     \`\`\`bash
-     ~/.codex/plugins/code-buddy/scripts/setup.sh
-     \`\`\`
-   - This will install and configure the necessary hooks for your project
+## License
 
-6. **Verify Installation**
-   - Restart Codex
-   - Run the following command to verify:
-     \`\`\`bash
-     codex plugin list
-     \`\`\`
-   - You should see "code-buddy" in the list of installed plugins
-
-#### Troubleshooting
-- If the plugin doesn't load, check your Codex configuration file for syntax errors
-- Ensure all Python dependencies are installed with the correct versions
-- Check the Codex logs for any error messages: \`~/.codex/logs/\`
-- For hook-related issues, verify that the setup script ran without errors
-
----
-
-## 📖 Documentation
-
-For detailed documentation and advanced usage guides, please check the documentation files in this repository or contact the development team.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request to contribute improvements.
-
-## 📄 License
-
-Code Buddy is licensed under the MIT License.
-
----
-
-**Code Buddy** - Making coding smarter with AI assistance
+[MIT](LICENSE)

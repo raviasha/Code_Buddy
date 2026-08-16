@@ -1,3 +1,7 @@
 .DS_Store
 __pycache__/
 *.pyc
+.code-buddy/
+Code Buddy.md
+Code Buddy Analytics.md
+.github/hooks/
