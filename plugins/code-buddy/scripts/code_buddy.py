@@ -14,6 +14,7 @@ from pathlib import Path
 
 DEFAULT_IGNORED_DIRECTORIES = {
     ".git",
+    ".token-lens",
     ".code-buddy",
     "node_modules",
     ".venv",
