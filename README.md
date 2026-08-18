@@ -14,6 +14,9 @@ extension.
   window is unavailable, Code Buddy shows the actual input-token count without
   inventing a percentage; if no matching native event exists, it uses the
   explicitly labeled Estimated Context Pressure fallback.
+- Context measurement now returns a deterministic `healthLineStatus`. Codex
+  and VS Code copy it into the prompt-facing health line, including current
+  tokens, model-window tokens, and the actual percentage when capacity exists.
 - Shows a model-presented `Personalized recommendation —` status after every
   submitted prompt. During cold start, it explicitly reports **Not enough data
   yet** instead of making a personalized claim.

@@ -5,6 +5,8 @@ its integrity checksum.
 
 ## What's new in v0.9.0
 
+- The prompt-facing context status now includes current tokens, model-window
+  tokens, and the actual percentage whenever native capacity is available.
 - Every submitted prompt gets a model-presented personalized-feedback status.
   Before enough comparable local evidence exists, the status says **Not enough
   data yet**.
