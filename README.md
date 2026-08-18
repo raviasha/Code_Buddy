@@ -7,6 +7,13 @@ extension.
 
 ## What's new in v0.9.0
 
+- Codex now reads the latest local `token_count` event and displays
+  `last_token_usage.input_tokens` as a percentage of the reported model context
+  window. This local read does not consume model tokens.
+- Current context never uses cumulative `total_token_usage`. If the model
+  window is unavailable, Code Buddy shows the actual input-token count without
+  inventing a percentage; if no matching native event exists, it uses the
+  explicitly labeled Estimated Context Pressure fallback.
 - Shows a model-presented `Personalized recommendation —` status after every
   submitted prompt. During cold start, it explicitly reports **Not enough data
   yet** instead of making a personalized claim.
