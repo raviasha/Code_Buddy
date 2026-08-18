@@ -1,6 +1,6 @@
 {
   "name": "code-buddy",
-  "version": "0.9.0+codex.20260818125851",
+  "version": "0.9.0+codex.20260818131102",
   "description": "Local governance, prompt quality, context handoffs, and replayable task telemetry for Codex coding tasks.",
   "author": {
     "name": "Code Buddy",

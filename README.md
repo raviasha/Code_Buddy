@@ -26,6 +26,8 @@ extension.
   overdispersion, plus test/build quality guardrails.
 - Adds VS Code commands for raw telemetry, task replay, and human-retry evidence,
   and a read-only Codex human-retry analysis tool.
+- Fixes the fresh-task bypass when Codex appends an invisible transport newline;
+  changed wording and punctuation remain rejected.
 
 These results describe local associations, not causation. Code Buddy does not
 make personalized claims until the configured evidence gates pass.
