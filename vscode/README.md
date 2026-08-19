@@ -7,6 +7,11 @@ its integrity checksum.
 
 - The prompt-facing context status now includes current tokens, model-window
   tokens, and the actual percentage whenever native capacity is available.
+- Context governance warns at 55%, offers curation at 65%, and lets the Codex
+  plugin pause new implementation tools at 70% actual utilization before
+  automatic compaction can win the race.
+- **Code Buddy: Create or Open Project Configuration** safely creates the full
+  default `code-buddy.yaml` without overwriting an existing personalized file.
 - Every submitted prompt gets a model-presented personalized-feedback status.
   Before enough comparable local evidence exists, the status says **Not enough
   data yet**.
@@ -56,7 +61,8 @@ Hook and transcript availability can vary by Copilot surface and rollout.
 
 4. Open the target workspace and run **Code Buddy: Install Copilot Hooks** from
    the Command Palette. Hook setup is explicit and must be run once per
-   workspace.
+   workspace. Choose **Create or Open Project Configuration** from the success
+   message if you want project-specific settings.
 5. Submit a meaningful prompt in a supported Copilot agent chat.
 
 ## Upgrade
@@ -69,6 +75,8 @@ Hook and transcript availability can vary by Copilot surface and rollout.
 
 ## Useful commands
 
+- **Code Buddy: Create or Open Project Configuration** — creates the default
+  `code-buddy.yaml` when absent or opens the existing file unchanged.
 - **Code Buddy: Open Feedback** — opens the concise per-turn feedback report.
 - **Code Buddy: Open Analytics** — opens detailed local session analytics.
 - **Code Buddy: Open Raw Task Telemetry** — reveals local schema-1.1 JSONL.
@@ -77,6 +85,46 @@ Hook and transcript availability can vary by Copilot surface and rollout.
   association evidence.
 - **Code Buddy: Remove Copilot Hooks** — removes managed hook configuration and
   instructions while preserving existing logs and reports.
+
+## Project configuration
+
+The extension works with built-in defaults and does not add a policy file just
+because the VSIX was installed. Use the command above when you want to
+personalize this workspace:
+
+```yaml
+version: 1
+healthCheck:
+  showOnEveryMeaningfulCodingTask: true
+thresholds:
+  promptQuality:
+    enhanceBelow: 75
+  taskScope:
+    decomposeAtOrAbove: 65
+  estimatedContextPressure:
+    capacityTokens: 40000
+    warningAt: 0.55
+    criticalAt: 0.65
+    pauseAt: 0.70
+  sessionFit:
+    recommendFreshTaskAtOrAbove: 75
+    fallbackLexicalOverlapBelow: 0.20
+measurement:
+  humanRetries:
+    minimumComparableTasks: 8
+    minimumTasksPerFactor: 5
+    reliabilityThreshold: 0.60
+    minimumEffectSize: 0.15
+    overdispersionThreshold: 1.50
+```
+
+Edit only the values you want to personalize. Context/reliability values are
+ratios from `0` to `1`; prompt/task/session-fit values are scores from `0` to
+`100`; and `warningAt <= criticalAt <= pauseAt` must remain true. Commit the
+file for team-wide settings or keep it untracked/use a personal Git exclude
+for developer-only settings. After editing, reload VS Code and rerun **Code
+Buddy: Install Copilot Hooks**. Invalid fields fall back independently instead
+of disabling Code Buddy.
 
 ## Evidence thresholds
 

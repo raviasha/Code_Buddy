@@ -17,6 +17,13 @@ extension.
 - Context measurement now returns a deterministic `healthLineStatus`. Codex
   and VS Code copy it into the prompt-facing health line, including current
   tokens, model-window tokens, and the actual percentage when capacity exists.
+- Native context utilization now warns at 55%, offers developer-controlled
+  curation at 65%, and pauses new Codex implementation tools at 70% until the
+  developer chooses fresh-task curation, current-task curation, or continuing
+  unchanged. Read/search and Code Buddy tools remain available.
+- Adds an opt-in project-configuration creator in both VS Code and Codex. It
+  writes the documented defaults only when `code-buddy.yaml` is absent and
+  never overwrites personalized settings.
 - Shows a model-presented `Personalized recommendation —` status after every
   submitted prompt. During cold start, it explicitly reports **Not enough data
   yet** instead of making a personalized claim.
@@ -65,7 +72,8 @@ make personalized claims until the configured evidence gates pass.
 
 4. Open the target workspace and run **Code Buddy: Install Copilot Hooks** from
    the Command Palette. Run this once in every workspace where Code Buddy should
-   operate.
+   operate. The installer then offers **Create or Open Project Configuration**
+   if you want project-specific settings.
 5. Submit a meaningful prompt in a supported Copilot agent chat.
 
 To upgrade, install the newer VSIX, reload VS Code, and run **Code Buddy:
@@ -97,6 +105,54 @@ codex plugin add code-buddy@code-buddy
 Fully restart Codex and create a new task after upgrading. See the [Codex plugin
 guide](./plugins/code-buddy/README.md) for policy configuration, local telemetry,
 and task replay commands.
+
+## Per-project configuration
+
+Code Buddy uses built-in defaults without adding files during plugin or VSIX
+installation. To personalize a project safely:
+
+- In VS Code, run **Code Buddy: Create or Open Project Configuration**.
+- In Codex, ask Code Buddy to create the project configuration; it calls
+  `create_project_config` for the active workspace.
+
+Both paths create `code-buddy.yaml` only when it is absent. An existing file is
+opened or reported without changing it. Commit the file to share policy with a
+team, or leave it untracked/use a personal Git exclude for developer-only
+settings.
+
+```yaml
+version: 1
+healthCheck:
+  showOnEveryMeaningfulCodingTask: true
+thresholds:
+  promptQuality:
+    enhanceBelow: 75
+  taskScope:
+    decomposeAtOrAbove: 65
+  estimatedContextPressure:
+    capacityTokens: 40000
+    warningAt: 0.55
+    criticalAt: 0.65
+    pauseAt: 0.70
+  sessionFit:
+    recommendFreshTaskAtOrAbove: 75
+    fallbackLexicalOverlapBelow: 0.20
+measurement:
+  humanRetries:
+    minimumComparableTasks: 8
+    minimumTasksPerFactor: 5
+    reliabilityThreshold: 0.60
+    minimumEffectSize: 0.15
+    overdispersionThreshold: 1.50
+```
+
+These are the complete defaults. Use ratios from `0` to `1` for context and
+reliability settings, scores from `0` to `100` for prompt/task/session fit, and
+keep `warningAt <= criticalAt <= pauseAt`. `capacityTokens` applies only to the
+explicitly labeled fallback estimate; native utilization uses the model window
+reported by Codex. Invalid fields fall back independently. Codex reads edits on
+subsequent prompts; VS Code users should reload the window and rerun **Code
+Buddy: Install Copilot Hooks** after editing.
 
 ## Privacy and control
 
